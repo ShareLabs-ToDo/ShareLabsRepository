@@ -60,7 +60,7 @@ Sharelabs is an Android application that allows users to easily create and track
 - Profile Screen
 - Timeline Screen
 - Settings Screen
-- 
+- User Tasks Screen
 
 ## Flow Navigation
 
@@ -70,9 +70,14 @@ Sharelabs is an Android application that allows users to easily create and track
 
 - Profile Screen
 
-    =
+    ⇒ None but a possible Friends Screen in future iterations
 
 - User Task Screen
+
+    ⇒ Detailed Task Screen
+
+    ⇒  Compose Screen
+
 - Detailed Task Screen
 - Timeline Screen
 - Settings Screen
