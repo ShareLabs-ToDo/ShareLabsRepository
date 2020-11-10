@@ -9,16 +9,15 @@ Sharelabs is an Android application that allows users to easily create and track
 
 ## Overview
 ### Description
-[Description of your app]
+Our app allows a group of people to come together and create a project. When you create a project, you are able to invite others to it and create initial tasks for them, as well as a project deadline. Once the project is initialized, the group members are able to check off what tasks they've finished and post to a shared update feed to inform others of their progress. You can easily see the cumulative progress of your work on the main project screen via a progress bar, as well as see the tasks of other group members.
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category:** Social Networking/ Productivity
+- **Mobile:** This app would mainly be designed with the idea that one would finish tasks throughout the day, using their phone to easily access the app, check off what they have done, or view the progress of others over time.
+- **Story:** Users come together to complete a project. When you finish a task, you can send a message to a group feed to update them of progress, or remind someone else to finish their tasks before the deadline.
+- **Market:** Anyone could use the app, and invite others that they know to work together. This is an all ages app, but it would make the most sense to use this in family/friend/work groups rather than with strangers.
+- **Habit:** The app is designed to be checked on a few times a day, and the user will be able to see at a glance how much cumulative progress has been made on the project.
+- **Scope:** First we would like to focus on using the app for personal purposes such as families, friends, or work groups. However, in the future, we could possibly expand this and add features that could allow anybody to invite others who they think would fit their project. This would most likely be done using a preferences and ratings system, that would allow people to invite others to their project depending on their skills, interests, and reliability.
 
 ## Product Spec
 
@@ -60,7 +59,7 @@ Sharelabs is an Android application that allows users to easily create and track
 - Profile Screen
 - Timeline Screen
 - Settings Screen
-- User Tasks Screen
+- 
 
 ## Flow Navigation
 
@@ -70,14 +69,9 @@ Sharelabs is an Android application that allows users to easily create and track
 
 - Profile Screen
 
-    ⇒ None but a possible Friends Screen in future iterations
+    =
 
 - User Task Screen
-
-    ⇒ Detailed Task Screen
-
-    ⇒  Compose Screen
-
 - Detailed Task Screen
 - Timeline Screen
 - Settings Screen
