@@ -1,6 +1,27 @@
 # ShareLabs
 Sharelabs is an Android application that allows users to easily create and track progress on their tasks and collaborate with other users interested in having group projects.
 
+## Table of Contents
+1. [Overview](#Overview)
+1. [Product Spec](#Product-Spec)
+1. [Wireframes](#Wireframes)
+2. [Schema](#Schema)
+
+## Overview
+### Description
+[Description of your app]
+
+### App Evaluation
+[Evaluation of your app across the following attributes]
+- **Category:**
+- **Mobile:**
+- **Story:**
+- **Market:**
+- **Habit:**
+- **Scope:**
+
+## Product Spec
+
 ## User Stories (Required and Optional)
 
 ### Required Stories
