@@ -1,4 +1,7 @@
-# User Stories (Required and Optional)
+# ShareLabs
+Sharelabs is an Android application that allows users to easily create and track progress on their tasks and collaborate with other users interested in having group projects.
+
+## User Stories (Required and Optional)
 
 ### Required Stories
 
