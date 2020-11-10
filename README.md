@@ -39,7 +39,7 @@ Sharelabs is an Android application that allows users to easily create and track
 - Profile Screen
 - Timeline Screen
 - Settings Screen
-- 
+- User Tasks Screen
 
 ## Flow Navigation
 
