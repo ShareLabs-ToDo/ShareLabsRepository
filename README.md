@@ -78,7 +78,7 @@ Our app allows a group of people to come together and create a project. When you
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="wirefram1" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
