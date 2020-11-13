@@ -139,10 +139,10 @@ Our app allows a group of people to come together and create a project. When you
 <img src="wirefram2.png" width=600>
 <img src="wirefram3.png" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
+### Digital Wireframes & Mockups
 <a href="https://imgur.com/yoXrFLV"><img src="https://i.imgur.com/yoXrFLV.png" title="source: imgur.com" /></a>
 
-### [BONUS] Interactive Prototype
+### Interactive Prototype
 <a href="https://imgur.com/u8kGsu4"><img src="https://i.imgur.com/u8kGsu4.gif" title="source: imgur.com" /></a>
 
 ## Schema 
