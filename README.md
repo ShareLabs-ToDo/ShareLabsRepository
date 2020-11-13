@@ -142,6 +142,7 @@ Our app allows a group of people to come together and create a project. When you
 ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
+<img src="First Prototype.gif" >
 
 ## Schema 
 [This section will be completed in Unit 9]
