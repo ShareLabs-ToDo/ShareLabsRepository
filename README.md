@@ -146,9 +146,40 @@ Our app allows a group of people to come together and create a project. When you
 <a href="https://imgur.com/u8kGsu4"><img src="https://i.imgur.com/u8kGsu4.gif" title="source: imgur.com" /></a>
 
 ## Schema 
-[This section will be completed in Unit 9]
+
 ### Models
-[Add table of models]
+
+**Task**
+| Property      | Type          | Description  |
+| ------------- |:-------------:| ------------:|
+| objectId     | string | unique id for the user task (default field) |
+| title     | string |   main title of the task |
+| isDone | boolean  | checks if the task has been finished|
+| deadline  | DateTime     |   date when task should be finished |
+| createdAt | DateTime     |   date when task is created (default field) |
+| updatedAt | DateTime     |   date when task is last updated (default field) |
+
+**User**
+| Property      | Type          | Description  |
+| ------------- |:-------------:| ------------:|
+| objectId     | string | unique id for the user (default field) |
+| username  | string |   username of the User |
+| password| string | password of the user|
+| email  | string  |   email of the user |
+| createdAt | DateTime     |   date when user is created (default field) |
+| updatedAt | DateTime     |   date when user is last updated (default field) |
+
+**Post**
+| Property      | Type          | Description  |
+| ------------- |:-------------:| ------------:|
+| objectId     | string | unique id for the user post (default field) |
+| author      | pointer to User |   post author |
+| message | string    |    post message by author|
+| image | File (optional)  |  image that User can add to post |
+| likesCount | number    |  number of likes for post|
+| createdAt | DateTime     |   date when post is created (default field) |
+| updatedAt | DateTime     |   date when post is last updated (default field) |
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
