@@ -166,6 +166,8 @@ Our app allows a group of people to come together and create a project. When you
 | username  | string |   username of the User |
 | password| string | password of the user|
 | email  | string  |   email of the user |
+| profileImage  | file  |   profile image of the user |
+| friends  | Lists of Users  |   friends/collaborators of the user |
 | createdAt | DateTime     |   date when user is created (default field) |
 | updatedAt | DateTime     |   date when user is last updated (default field) |
 
@@ -181,6 +183,20 @@ Our app allows a group of people to come together and create a project. When you
 | updatedAt | DateTime     |   date when post is last updated (default field) |
 
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+## Networking Requests
+
+- Your Tasks Screen
+    - (GET) Query all tasks current user created not marked complete
+    - (POST) Update a task
+    - (DELETE) Delete existing task
+- Detailed Task Screen
+    - (GET) Properties of Current Task
+- Profile Screen
+    - (GET) Query all tasks marked complete by user
+    - (GET) Query profile image uploaded by user
+- All Tasks
+    - (GET) Query profile image of other users
+- Compose Screen
+    - (POST) Create a new task
+
+
