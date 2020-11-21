@@ -199,6 +199,7 @@ Our app allows a group of people to come together and create a project. When you
     - (GET) Query profile image of other users
 - Compose Screen
     - (POST) Create a new task
+- <a href="https://imgur.com/n2bMOgw"><img src="https://i.imgur.com/n2bMOgw.png" title="source: imgur.com" /></a>
 
 
 
