@@ -154,6 +154,7 @@ Our app allows a group of people to come together and create a project. When you
 | ------------- |:-------------:| ------------:|
 | objectId     | string | unique id for the user task (default field) |
 | title     | string |   main title of the task |
+| author      | pointer to User |   post author |
 | isDone | boolean  | checks if the task has been finished|
 | deadline  | DateTime     |   date when task should be finished |
 | createdAt | DateTime     |   date when task is created (default field) |
