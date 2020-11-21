@@ -135,9 +135,9 @@ Our app allows a group of people to come together and create a project. When you
 
 
 ## Wireframes
-<img src="https://github.com/ShareLabs-ToDo/ShareLabsRepository/blob/main/wirefram1.png" width=600>
-<img src="https://github.com/ShareLabs-ToDo/ShareLabsRepository/blob/main/wirefram2.png" width=600>
-<img src="https://github.com/ShareLabs-ToDo/ShareLabsRepository/blob/main/wirefram3.png" width=600>
+<img src="wirefram1.png" width=600>
+<img src="wirefram2.png" width=600>
+<img src="wirefram3.png" width=600>
 
 ### Digital Wireframes & Mockups
 <a href="https://imgur.com/yoXrFLV"><img src="https://i.imgur.com/yoXrFLV.png" title="source: imgur.com" /></a>
