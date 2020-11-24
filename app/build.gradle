@@ -30,4 +30,9 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+<<<<<<< HEAD
+=======
+    implementation "com.github.parse-community.Parse-SDK-Android:parse:1.18.5"
+
+>>>>>>> 121e881bd0591ef15de5f0f6bc4d9612066ac9ed
 }

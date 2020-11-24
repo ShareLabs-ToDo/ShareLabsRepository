@@ -2,20 +2,41 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sharedto_doapp">
 
+<<<<<<< HEAD
     <application
+=======
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="ParseApplication"
+>>>>>>> 121e881bd0591ef15de5f0f6bc4d9612066ac9ed
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".MainActivity">
+=======
+        <activity android:name=".LoginActivity">
+>>>>>>> 121e881bd0591ef15de5f0f6bc4d9612066ac9ed
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
+=======
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+            </intent-filter>
+        </activity>
+>>>>>>> 121e881bd0591ef15de5f0f6bc4d9612066ac9ed
     </application>
 
 </manifest>
