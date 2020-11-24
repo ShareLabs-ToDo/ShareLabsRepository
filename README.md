@@ -25,7 +25,7 @@ Our app allows a group of people to come together and create a project. When you
 
 ### Required Stories
 
-- User can create an account with a unique username
+- [] User can create an account with a unique username
 - User can login
 - User can see overview of project name, progress on project, where to access his or her own individual tasks, where to access all tasks
 - User can access his or her own individual tasks
