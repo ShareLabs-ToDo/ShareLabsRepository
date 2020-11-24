@@ -34,5 +34,15 @@
         android:layout_weight="1"
         android:text="Login" />
 
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_weight="1"
+        android:background="@android:color/holo_green_light"
+        android:text="Sign Up"
+        android:textColor="@android:color/black" />
+
 
 </LinearLayout>
