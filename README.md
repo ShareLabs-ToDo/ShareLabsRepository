@@ -25,26 +25,26 @@ Our app allows a group of people to come together and create a project. When you
 
 ### Required Stories
 
-- [ ] User can create an account with a unique username
-- User can login
-- User can see overview of project name, progress on project, where to access his or her own individual tasks, where to access all tasks
-- User can access his or her own individual tasks
-- User can access all tasks 
-- User can create tasks 
-- User can see his or her own profile
-- User can see progress on his or her own individual tasks
-- User can see profiles of other users
-- User can see tasks of other users 
-- User can see progress on tasks of other users
-- User can post updates and comments about project
-- User can view a description of the app
+- [x] User can create an account with a unique username
+- [x] User can login
+- [ ] User can see overview of project name, progress on project, where to access his or her own individual tasks, where to access all tasks
+- [ ] User can access his or her own individual tasks
+- [ ] User can access all tasks 
+- [ ] User can create tasks 
+- [ ] User can see his or her own profile
+- [ ] User can see progress on his or her own individual tasks
+- [ ] User can see profiles of other users
+- [ ] User can see tasks of other users 
+- [ ] User can see progress on tasks of other users
+- [ ] User can post updates and comments about project
+- [ ] User can view a description of the app
 
 
 ### Optional Stories
 
-- User can edit their own profile picture
-- User can change the color and design of the project overview screen
-- User can view a description of the project
+- [ ] User can edit their own profile picture
+- [ ] User can change the color and design of the project overview screen
+- [ ] User can view a description of the project
 
 # Screen Archetypes
 
