@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Shared To-Do App</string>
+    <string name="title">Title</string>
+    <string name="sub_tasks">Sub tasks</string>
 </resources>
