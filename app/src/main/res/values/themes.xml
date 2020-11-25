@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppBackground" parent="AppTheme">
-        <item name="colorPrimary">#0DD3FE</item>
+    <!-- Base application theme. -->
+    <style name="Theme.ShareLabs" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/backgroundBlue</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <style name="counterText">
+        <item name="android:textColor">#213970</item>
+    </style>
+
+    <style name="counterOverride">
+        <item name="android:textColor">#210070</item>
+    </style>
+
+
 </resources>

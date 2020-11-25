@@ -2,4 +2,7 @@
     <string name="app_name">Shared To-Do App</string>
     <string name="title">Title</string>
     <string name="sub_tasks">Sub tasks</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="your_tasks_header">Your Tasks</string>
 </resources>
