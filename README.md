@@ -37,7 +37,8 @@ Our app allows a group of people to come together and create a project. When you
 - [ ] User can see profiles of other users
 - [ ] User can see tasks of other users 
 - [ ] User can see progress on tasks of other users
-- [ ] User can post updates and comments about project
+- [x] User can post updates and comments about project
+- [x] User can see a timeline of all posts
 - [ ] User can view a description of the app
 =======
 - User can create an account with a unique username
