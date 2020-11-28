@@ -27,6 +27,7 @@
         android:inputType="textPassword" />
 
     <Button
+<<<<<<< HEAD
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,6 +36,8 @@
         android:text="Login" />
 
     <Button
+=======
+>>>>>>> a0b8624cddda8edb45380b8ae1c22ab96c4133d1
         android:id="@+id/btnSignUp"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
@@ -44,5 +47,16 @@
         android:text="Sign Up"
         android:textColor="@android:color/black" />
 
+<<<<<<< HEAD
+=======
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_weight="1"
+        android:text="Login" />
+
+>>>>>>> a0b8624cddda8edb45380b8ae1c22ab96c4133d1
 
 </LinearLayout>

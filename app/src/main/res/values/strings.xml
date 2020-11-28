@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">Shared To-Do App</string>
+<<<<<<< HEAD
     <string name="title">Title</string>
     <string name="sub_tasks">Sub tasks</string>
+=======
+    <string name="add_photo_optional">Add Photo (optional)</string>
+    <string name="type_update_message_here">Type update message here!</string>
+    <string name="post">Post!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+>>>>>>> a0b8624cddda8edb45380b8ae1c22ab96c4133d1
 </resources>
