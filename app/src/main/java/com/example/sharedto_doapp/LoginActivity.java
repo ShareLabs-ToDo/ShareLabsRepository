@@ -28,13 +28,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login2);
 
-<<<<<<< HEAD
-=======
         if (ParseUser.getCurrentUser() != null) { //Navigates directly to main activity if already logged in
             goMainActivity();
         }
 
->>>>>>> a0b8624cddda8edb45380b8ae1c22ab96c4133d1
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);

@@ -22,4 +22,10 @@
         android:icon="@drawable/ic_baseline_chat_bubble_24"
         android:title="Feed"
         app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_task"
+        android:icon="@drawable/ic_baseline_work_24"
+        android:title="Task"
+        app:showAsAction="always" />
 </menu>

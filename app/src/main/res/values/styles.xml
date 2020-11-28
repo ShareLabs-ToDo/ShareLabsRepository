@@ -7,7 +7,6 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-<<<<<<< HEAD
     <style name="counterText">
         <item name="android:textColor">#213970</item>
     </style>
@@ -16,7 +15,4 @@
         <item name="android:textColor">#210070</item>
     </style>
 
-
-=======
->>>>>>> a0b8624cddda8edb45380b8ae1c22ab96c4133d1
 </resources>

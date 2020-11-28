@@ -6,5 +6,5 @@
     <color name="backgroundBlue">#0DD3FE</color>
     <color name="taskBackgroundBlue">#60CFFF</color>
     <color name="navBarBackgorund">#8E92F3</color>
-    <color name="composeAreaBackground">rgba(255, 255, 255, 0.85)</color>
+    <color name="composeAreaBackground">#FFFFFF</color>
 </resources>

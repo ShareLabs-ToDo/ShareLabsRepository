@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.sharedto_doapp.R;
 import com.example.sharedto_doapp.TaskComposeActivity;
@@ -51,7 +52,7 @@ public class YourTasksFragment extends Fragment {
 
         RecyclerView taskListRV = view.findViewById(R.id.task_list_rv);
 
-        Button createButton = view.findViewById(R.id.task_compose_button);
+        ImageButton createButton = view.findViewById(R.id.task_create_button);
         createButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

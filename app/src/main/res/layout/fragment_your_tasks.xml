@@ -37,6 +37,7 @@
         android:src="@drawable/default_image"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="20dp"
         app:layout_constraintEnd_toStartOf="@+id/your_tasks_header"
         android:layout_marginTop="40dp"/>
 
