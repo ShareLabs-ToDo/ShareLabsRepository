@@ -2,6 +2,7 @@ package com.example.sharedto_doapp;
 
 import android.app.Application;
 
+import com.example.sharedto_doapp.models.Post;
 import com.parse.Parse;
 <<<<<<< HEAD
 =======

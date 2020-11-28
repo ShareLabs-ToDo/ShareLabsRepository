@@ -22,12 +22,4 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
-<<<<<<< HEAD
-=======
-}
-
-ext {
-    appCompatVersion = '1.0.0'
-    designSupportVersion = '1.0.0'
->>>>>>> a0b8624cddda8edb45380b8ae1c22ab96c4133d1
 }

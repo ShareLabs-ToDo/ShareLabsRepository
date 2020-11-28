@@ -8,6 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import com.example.sharedto_doapp.fragments.TaskAdapter;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -23,6 +24,7 @@ import com.parse.ParseException;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,7 +33,11 @@ public class YourTasksFragment extends Fragment {
     public static final String TAG = "TaskFragment";
     public TaskAdapter taskAdapter;
     public List<Task> userTasks;
-    
+
+    public YourTasksFragment() {
+        // Required empty public constructor
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

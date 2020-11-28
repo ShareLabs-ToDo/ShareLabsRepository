@@ -1,4 +1,4 @@
-package com.example.sharedto_doapp;
+package com.example.sharedto_doapp.models;
 
 import com.parse.ParseClassName;
 import com.parse.ParseFile;
