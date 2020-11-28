@@ -223,6 +223,12 @@ Our app allows a group of people to come together and create a project. When you
 - Compose Screen
     - (POST) Create a new task
     - <a href="https://imgur.com/n2bMOgw"><img src="https://i.imgur.com/n2bMOgw.png" title="source: imgur.com" /></a>
+    
+    
+### Build Progress
+
+<img src='ShareLabs Progress Gif 1.gif' title='11/27/20' width='' alt='Video Walkthrough' />
+
 
 
 
