@@ -227,6 +227,7 @@ Our app allows a group of people to come together and create a project. When you
     
 ### Build Progress
 
+## 11/27/20
 <img src='ShareLabs Progress Gif 1.gif' title='11/27/20' width='' alt='Video Walkthrough' />
 
 
