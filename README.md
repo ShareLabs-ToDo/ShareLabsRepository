@@ -37,7 +37,8 @@ Our app allows a group of people to come together and create a project. When you
 - [ ] User can see profiles of other users
 - [ ] User can see tasks of other users 
 - [ ] User can see progress on tasks of other users
-- [ ] User can post updates and comments about project
+- [x] User can post updates and comments about project
+- [x] User can see a timeline of all posts
 - [ ] User can view a description of the app
 =======
 - User can create an account with a unique username
@@ -222,7 +223,18 @@ Our app allows a group of people to come together and create a project. When you
 - Compose Screen
     - (POST) Create a new task
     - <a href="https://imgur.com/n2bMOgw"><img src="https://i.imgur.com/n2bMOgw.png" title="source: imgur.com" /></a>
+    
+    
+### Build Progress
+
+## November 27, 2020
+<img src='ShareLabs Progress Gif 1.gif' title='11/27/20' width='' alt='Video Walkthrough' />
 
 
+GIFs created with [LiceCap](http://www.cockos.com/licecap/).
 
+## Open-source libraries used
+
+- [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
+- [Glide](https://github.com/bumptech/glide) - Image loading and caching library for Android
 
