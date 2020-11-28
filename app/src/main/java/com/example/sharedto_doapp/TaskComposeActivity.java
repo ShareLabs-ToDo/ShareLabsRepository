@@ -1,11 +1,14 @@
 package com.example.sharedto_doapp;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.sharedto_doapp.models.Task;
@@ -16,12 +19,14 @@ import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class TaskComposeActivity extends AppCompatActivity {
 
     public static final String TAG = "TaskComposeActivity";
 
     TextInputEditText taskTitleField = findViewById(R.id.compose_task_field);
+    ImageButton backButton = findViewById(R.id.back_button);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +35,19 @@ public class TaskComposeActivity extends AppCompatActivity {
 
         Button composeButton = findViewById(R.id.task_compose_button);
         composeButton.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onClick(View view) {
-                String task_title = taskTitleField.getText().toString();
+                String task_title = Objects.requireNonNull(taskTitleField.getText()).toString();
                 createNewTask(task_title);
+                finish();
+            }
+        });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
 
