@@ -24,7 +24,7 @@ public class Task extends ParseObject{
     public ParseUser getUser() { return getParseUser(KEY_USER); }
     public String getTitle() { return getString(KEY_TITLE); }
     public Boolean getIsDone() { return getBoolean(KEY_IS_DONE); }
-    public Date getDeadline() { return getDate(KEY_DEADLINE); }
+    public String getDeadline() { return getDate(KEY_DEADLINE).toString(); }
 
     public void setUser(ParseUser user) { put(KEY_USER, user); }
     public void setTitle(String title) { put(KEY_TITLE, title); }

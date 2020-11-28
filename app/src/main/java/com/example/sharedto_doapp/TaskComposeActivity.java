@@ -1,7 +1,9 @@
 package com.example.sharedto_doapp;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,6 +19,7 @@ import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class TaskComposeActivity extends AppCompatActivity {
 
@@ -32,9 +35,10 @@ public class TaskComposeActivity extends AppCompatActivity {
 
         Button composeButton = findViewById(R.id.task_compose_button);
         composeButton.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onClick(View view) {
-                String task_title = taskTitleField.getText().toString();
+                String task_title = Objects.requireNonNull(taskTitleField.getText()).toString();
                 createNewTask(task_title);
                 finish();
             }
