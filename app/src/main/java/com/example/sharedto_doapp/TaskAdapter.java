@@ -25,7 +25,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
     List<Task> tasks;
     Context context;
 
-    public TaskAdapter(ArrayList<Task> tasks, Context context){
+    public TaskAdapter(ArrayList<Task> tasks, Context context) {
         this.tasks = tasks;
         this.context = context;
     }
@@ -37,7 +37,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
 
         View taskView = layoutInflater.inflate(R.layout.task_item, parent, false);
-        return  new ViewHolder(taskView);
+        return new ViewHolder(taskView);
     }
 
     @Override
@@ -66,7 +66,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
 
         }
 
-        public void bind(Task task){
+        public void bind(Task task) {
             taskTitleTV.setText(task.getTitle());
             isDoneImage(task.getIsDone());
             taskDeadlineTV.setText(task.getDeadline());
