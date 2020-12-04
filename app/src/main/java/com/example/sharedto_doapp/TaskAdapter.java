@@ -5,21 +5,18 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.sharedto_doapp.DetailedTaskActivity;
-import com.example.sharedto_doapp.R;
 import com.example.sharedto_doapp.models.Task;
 
 import org.parceler.Parcels;
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,7 +55,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         public TextView taskTitleTV;
-        public ImageView titleCheckbox;
+        public Button titleCheckbox;
         public TextView taskDeadlineTV;
         public ConstraintLayout tasksContainer;
 
@@ -74,7 +71,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
 
         public void bind(final Task task) {
             taskTitleTV.setText(task.getTitle());
-            isDoneImage(task.getIsDone());
+            isDone(task.getIsDone());
             taskDeadlineTV.setText(task.getDeadline());
 
             tasksContainer.setOnClickListener(new View.OnClickListener() {
@@ -85,13 +82,24 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
                     context.startActivity(intent);
                 }
             });
+
+            titleCheckbox.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Boolean oldState = task.getIsDone();
+                    Boolean newState = !oldState;
+
+                    isDone(newState);
+                    task.updateIsDone(task.getObjectId(), newState);
+                }
+            });
         }
 
-        public void isDoneImage(Boolean isDone) {
+        public void isDone(Boolean isDone) {
             if (isDone) {
-                Glide.with(context).load(R.drawable.ic_filled_check_box_24).into(titleCheckbox);
+                titleCheckbox.setBackgroundResource(R.drawable.ic_filled_check_box_24);
             } else {
-                Glide.with(context).load(R.drawable.ic_outline_check_box_24).into(titleCheckbox);
+                titleCheckbox.setBackgroundResource(R.drawable.ic_outline_check_box_24);
             }
         }
     }

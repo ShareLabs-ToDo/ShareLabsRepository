@@ -1,7 +1,10 @@
 package com.example.sharedto_doapp.models;
 
+import com.parse.GetCallback;
 import com.parse.ParseClassName;
+import com.parse.ParseException;
 import com.parse.ParseObject;
+import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
 import org.parceler.Parcel;
@@ -50,4 +53,18 @@ public class Task extends ParseObject {
     public void setDeadline(Date deadline) { put(KEY_DEADLINE, deadline); }
 
     public void setSubTasks(String subtasks) { put(KEY_SUBTASKS, subtasks);}
+
+    public void updateIsDone(String objectId, final Boolean newState){
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("Task");
+
+        query.getInBackground(objectId, new GetCallback<ParseObject>() {
+            public void done(ParseObject entity, ParseException e) {
+                if (e == null) {
+                    entity.put(KEY_IS_DONE, newState);
+
+                    entity.saveInBackground();
+                }
+            }
+        });
+    }
 }

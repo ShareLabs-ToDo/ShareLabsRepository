@@ -19,11 +19,11 @@
         android:text="Check Up On Discord"
         android:textStyle="bold"/>
 
-    <ImageView
+    <Button
         android:id="@+id/title_checkbox"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:src="@drawable/ic_outline_check_box_24"
+        android:background="@drawable/ic_outline_check_box_24"
         app:layout_constraintEnd_toStartOf="@id/task_title"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="6dp"
