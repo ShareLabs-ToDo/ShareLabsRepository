@@ -1,6 +1,7 @@
-package com.example.sharedto_doapp.fragments;
+package com.example.sharedto_doapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,13 +9,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.sharedto_doapp.DetailedTaskActivity;
 import com.example.sharedto_doapp.R;
 import com.example.sharedto_doapp.models.Task;
 
+import org.parceler.Parcels;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
@@ -56,6 +60,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
         public TextView taskTitleTV;
         public ImageView titleCheckbox;
         public TextView taskDeadlineTV;
+        public ConstraintLayout tasksContainer;
 
         public ViewHolder(View taskView) {
             super(taskView);
@@ -63,13 +68,23 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
             taskTitleTV = taskView.findViewById(R.id.task_title);
             titleCheckbox = taskView.findViewById(R.id.title_checkbox);
             taskDeadlineTV = taskView.findViewById(R.id.task_deadline);
+            tasksContainer = taskView.findViewById(R.id.tasks_container);
 
         }
 
-        public void bind(Task task) {
+        public void bind(final Task task) {
             taskTitleTV.setText(task.getTitle());
             isDoneImage(task.getIsDone());
             taskDeadlineTV.setText(task.getDeadline());
+
+            tasksContainer.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(context, DetailedTaskActivity.class);
+                    intent.putExtra("task", Parcels.wrap(task));
+                    context.startActivity(intent);
+                }
+            });
         }
 
         public void isDoneImage(Boolean isDone) {

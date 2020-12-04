@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.sharedto_doapp.fragments.TaskAdapter;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,8 +16,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
-
 import com.example.sharedto_doapp.R;
+import com.example.sharedto_doapp.TaskAdapter;
 import com.example.sharedto_doapp.TaskComposeActivity;
 import com.example.sharedto_doapp.models.Task;
 import com.parse.FindCallback;
@@ -33,6 +33,7 @@ public class YourTasksFragment extends Fragment {
     
     public static final String TAG = "TaskFragment";
     public TaskAdapter taskAdapter;
+    SwipeRefreshLayout swipeRefresh;
     public List<Task> userTasks;
 
     public YourTasksFragment() {
@@ -61,12 +62,26 @@ public class YourTasksFragment extends Fragment {
             }
         });
         
-        userTasks = new ArrayList<Task>();
+        userTasks = new ArrayList<>();
         taskAdapter = new TaskAdapter((ArrayList<Task>) userTasks, getContext());
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         taskListRV.setLayoutManager(linearLayoutManager);
         taskListRV.setAdapter(taskAdapter);
+
+        swipeRefresh = view.findViewById(R.id.swipe_refresh);
+        swipeRefresh.setColorSchemeResources(android.R.color.holo_blue_bright,
+                android.R.color.holo_green_light,
+                android.R.color.holo_orange_light,
+                android.R.color.holo_red_light);
+
+        swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                Log.i(TAG, "Fetching new data...");
+                queryTasks();
+            }
+        });
 
         queryTasks();
 
@@ -86,7 +101,7 @@ public class YourTasksFragment extends Fragment {
                     return;
                 }
                 for (Task task : tasks) {
-                    Log.i(TAG, "Task: " + task.getTitle());
+                    Log.i(TAG, "Task: " + task.getTitle() + task.getDeadline());
                 }
                 userTasks.clear();
                 userTasks.addAll(tasks);

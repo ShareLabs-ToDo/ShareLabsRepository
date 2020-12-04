@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.sharedto_doapp.AllTasksActivity;
 import com.example.sharedto_doapp.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -41,12 +42,22 @@ public class HomeFragment extends Fragment {
 
 
         Button your_tasks_button = view.findViewById(R.id.your_tasks_button);
+        Button all_tasks_button = view.findViewById(R.id.all_tasks_button);
+
         your_tasks_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Fragment fragment = new YourTasksFragment();
                 FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
                 fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();
+            }
+        });
+
+        all_tasks_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), AllTasksActivity.class);
+                startActivity(intent);
             }
         });
     }

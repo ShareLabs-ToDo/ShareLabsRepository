@@ -11,35 +11,43 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.example.sharedto_doapp.models.Task;
 
+import com.example.sharedto_doapp.models.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 public class TaskComposeActivity extends AppCompatActivity {
 
     public static final String TAG = "TaskComposeActivity";
 
-    TextInputEditText taskTitleField = findViewById(R.id.compose_task_field);
-    ImageButton backButton = findViewById(R.id.back_button);
+    TextInputEditText taskTitleField;
+    TextInputEditText subTaskTitleField;
+    ImageButton backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_compose);
+        backButton = findViewById(R.id.back_button);
+
+        taskTitleField = findViewById(R.id.compose_task_field);
+        subTaskTitleField = findViewById(R.id.compose_sub_task_field);
 
         Button composeButton = findViewById(R.id.task_compose_button);
         composeButton.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onClick(View view) {
-                String task_title = Objects.requireNonNull(taskTitleField.getText()).toString();
-                createNewTask(task_title);
+                String task_title = taskTitleField.getText().toString();
+                String subtasks = subTaskTitleField.getText().toString();
+
+                createNewTask(task_title, ParseUser.getCurrentUser(), subtasks);
                 finish();
             }
         });
@@ -53,12 +61,13 @@ public class TaskComposeActivity extends AppCompatActivity {
 
     }
 
-    public void createNewTask(String title) {
+    private void createNewTask(String title, ParseUser user, String subtasks) {
         Task task = new Task();
-        task.setUser(ParseUser.getCurrentUser());
+        task.setUser(user);
         task.setTitle(title);
         task.setIsDone(false);
         task.setDeadline(new Date());
+        task.setSubTasks(subtasks);
 
         task.saveInBackground(new SaveCallback() {
             @Override

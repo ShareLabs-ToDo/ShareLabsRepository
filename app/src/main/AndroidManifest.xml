@@ -11,7 +11,6 @@
         <intent>
             <action android:name="android.media.action.IMAGE_CAPTURE" />
         </intent>
-
     </queries>
 
     <application
@@ -22,13 +21,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ShareLabs">
-        <activity android:name=".TaskComposeActivity"></activity>
+        <activity android:name=".DetailedTaskActivity"></activity>
+        <activity android:name=".AllTasksActivity" />
+        <activity android:name=".TaskComposeActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
-
             android:authorities="com.codepath.fileprovider"
-
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
