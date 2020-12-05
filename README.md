@@ -25,26 +25,28 @@ Our app allows a group of people to come together and create a project. When you
 
 ### Required Stories
 
-- User can create an account with a unique username
-- User can login
-- User can see overview of project name, progress on project, where to access his or her own individual tasks, where to access all tasks
-- User can access his or her own individual tasks
-- User can access all tasks 
-- User can create tasks 
-- User can see his or her own profile
-- User can see progress on his or her own individual tasks
-- User can see profiles of other users
-- User can see tasks of other users 
-- User can see progress on tasks of other users
-- User can post updates and comments about project
-- User can view a description of the app
+- [x] User can create an account with a unique username
+- [x] User can login
+- [ ] User can see overview of project name, progress on project, where to access his or her own individual tasks, where to access all tasks
+- [ ] User can access his or her own individual tasks
+- [ ] User can access all tasks 
+- [ ] User can create tasks 
+- [ ] User can see his or her own profile
+- [ ] User can see progress on his or her own individual tasks
+- [ ] User can see profiles of other users
+- [ ] User can see tasks of other users 
+- [ ] User can see progress on tasks of other users
+- [x] User can post updates and comments about project
+- [x] User can see a timeline of all posts
+- [ ] User can view a description of the app
 
 
 ### Optional Stories
 
-- User can edit their own profile picture
-- User can change the color and design of the project overview screen
-- User can view a description of the project
+- [ ] User can edit their own profile picture
+- [ ] User can change the color and design of the project overview screen
+- [ ] User can view a description of the project
+
 
 # Screen Archetypes
 
@@ -201,6 +203,17 @@ Our app allows a group of people to come together and create a project. When you
     - (POST) Create a new task
     - <a href="https://imgur.com/n2bMOgw"><img src="https://i.imgur.com/n2bMOgw.png" title="source: imgur.com" /></a>
 
+    
+### Build Progress
+
+## November 27, 2020
+<img src='ShareLabs Progress Gif 1.gif' title='11/27/20' width='' alt='Video Walkthrough' />
 
 
+GIFs created with [LiceCap](http://www.cockos.com/licecap/).
+
+## Open-source libraries used
+
+- [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
+- [Glide](https://github.com/bumptech/glide) - Image loading and caching library for Android
 

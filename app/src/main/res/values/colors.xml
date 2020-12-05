@@ -3,4 +3,8 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="backgroundBlue">#0DD3FE</color>
+    <color name="taskBackgroundBlue">#60CFFF</color>
+    <color name="navBarBackgorund">#8E92F3</color>
+    <color name="composeAreaBackground">#FFFFFF</color>
 </resources>

@@ -22,11 +22,16 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etPassword;
     private Button btnSignUp;
     private Button btnLogin;
+    private Button btnSignUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login2);
+
+        if (ParseUser.getCurrentUser() != null) { //Navigates directly to main activity if already logged in
+            goMainActivity();
+        }
 
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
