@@ -1,6 +1,8 @@
 package com.example.sharedto_doapp.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +14,13 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
+import com.example.sharedto_doapp.AllTasksActivity;
+import com.example.sharedto_doapp.DetailedTaskActivity;
+import com.example.sharedto_doapp.LoginActivity;
 import com.example.sharedto_doapp.R;
+import com.parse.ParseUser;
+
+import static com.example.sharedto_doapp.LoginActivity.TAG;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -83,6 +91,42 @@ public class HomeFragment extends Fragment {
         tvProjectName = view.findViewById(R.id.tvProjectName);
         tvYourTasks = view.findViewById(R.id.tvYourTasks);
         tvAllTasks = view.findViewById(R.id.tvAllTasks);
+
+        tvYourTasks.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Intent startDetailedTaskActivityIntent = new Intent(getContext(), DetailedTaskActivity.class);
+                startActivity(startDetailedTaskActivityIntent);
+            }
+        });
+
+
+        tvAllTasks.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Intent startAllTasksActivityIntent = new Intent(getContext(), AllTasksActivity.class);
+                startActivity(startAllTasksActivityIntent);
+            }
+        });
+
+        /*tvAllTasks = view.findViewById(R.id.tvYourTasks);
+        tvAllTasks.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+                Log.i(TAG, ParseUser.getCurrentUser().toString());
+                ParseUser.logOut();
+                ParseUser currentUser = ParseUser.getCurrentUser(); // this will now be null
+
+                Intent startLoginActivityIntent = new Intent(getContext(), LoginActivity.class);
+                startActivity(startLoginActivityIntent);
+            }
+        });*/
 
     }
 }

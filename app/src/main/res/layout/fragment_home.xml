@@ -10,24 +10,26 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tbToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
 
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_marginStart="-1dp"
+        android:layout_marginLeft="-1dp"
         android:layout_marginTop="0dp"
-        android:layout_marginEnd="7dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
+        android:paddingLeft="150dp"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:title="WELCOME!"
-        app:titleTextColor="@color/black"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="-1dp"
-        android:layout_marginRight="7dp" />
+        app:titleTextColor="@color/black" />
+
 
     <ImageView
         android:id="@+id/ivPostImage"
@@ -35,17 +37,16 @@
         android:layout_height="200dp"
         android:layout_below="@+id/tbToolbar"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="-3dp"
-        android:layout_marginTop="45dp"
-        tools:srcCompat="@tools:sample/avatars"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="-3dp" />
-
+        android:layout_marginStart="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="45dp"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/tvProjectName"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="10dp"
         android:layout_below="@+id/tbToolbar"
         android:layout_alignParentStart="false"
         android:layout_alignParentLeft="false"
@@ -53,18 +54,19 @@
         android:layout_alignParentRight="false"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="150dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="290dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="337dp"
         android:layout_marginEnd="70dp"
         android:layout_marginRight="70dp"
-        android:layout_marginBottom="337dp"
+        android:layout_marginBottom="325dp"
         android:background="@android:color/holo_blue_light"
-        android:includeFontPadding="false"
         android:lineSpacingExtra="0dp"
+        android:maxHeight="10dp"
         android:text="ShareLabs PROJECT"
         android:textColor="@android:color/white"
-        android:textSize="10sp" />
+        android:textSize="10sp"
+        app:lineHeight="100sp" />
 
     <TextView
         android:id="@+id/tvYourTasks"
