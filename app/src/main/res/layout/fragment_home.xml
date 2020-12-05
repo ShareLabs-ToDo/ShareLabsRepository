@@ -8,9 +8,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.HomeFragment">
 
+
+    <!--<ImageView
+        android:id="@+id/ivPostImage"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_below="@+id/tbToolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="76dp"
+        android:layout_marginLeft="76dp"
+        android:layout_marginTop="45dp"
+        tools:srcCompat="@tools:sample/avatars" />-->
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tbToolbar"
-        android:layout_width="411dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
@@ -26,47 +39,35 @@
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
         android:paddingLeft="150dp"
+        android:paddingRight="130dp"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:title="WELCOME!"
         app:titleTextColor="@color/black" />
 
-
-    <ImageView
-        android:id="@+id/ivPostImage"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
+    <TextView
+        android:id="@+id/tvProjectName"
+        android:layout_width="124dp"
+        android:layout_height="25dip"
         android:layout_below="@+id/tbToolbar"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginStart="42dp"
-        android:layout_marginLeft="42dp"
-        android:layout_marginTop="45dp"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <TextView
-        android:id="@+id/tvProjectName"
-        android:layout_width="wrap_content"
-        android:layout_height="10dp"
-        android:layout_below="@+id/tbToolbar"
-        android:layout_alignParentStart="false"
-        android:layout_alignParentLeft="false"
         android:layout_alignParentEnd="false"
         android:layout_alignParentRight="false"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentBottom="false"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="337dp"
+        android:layout_marginStart="134dp"
+        android:layout_marginLeft="134dp"
+        android:layout_marginTop="387dp"
         android:layout_marginEnd="70dp"
         android:layout_marginRight="70dp"
-        android:layout_marginBottom="325dp"
+        android:layout_marginBottom="169dp"
         android:background="@android:color/holo_blue_light"
         android:lineSpacingExtra="0dp"
         android:maxHeight="10dp"
         android:text="ShareLabs PROJECT"
         android:textColor="@android:color/white"
-        android:textSize="10sp"
-        app:lineHeight="100sp" />
+        android:textSize="12sp"
+        app:lineHeight="40dp" />
 
     <TextView
         android:id="@+id/tvYourTasks"
@@ -91,12 +92,46 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginTop="216dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginRight="70dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
         android:text="ALL TASKS"
         android:textColor="@color/red"
-        android:textSize="10sp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
+    <ImageView
+        android:id="@+id/ivSettingsIcon"
+        android:layout_width="57dp"
+        android:layout_height="92dp"
+        android:layout_below="@+id/tvAllTasks"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginTop="73dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginRight="63dp"
+        android:layout_marginBottom="300dp"
+        android:contentDescription="ivSettingsIcon"
+        app:srcCompat="@drawable/ic_baseline_settings_24" />
+
+    <ProgressBar
+        android:id="@+id/pbProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="45dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/tbToolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginStart="104dp"
+        android:layout_marginLeft="104dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginBottom="411dp"
+        android:background="#2196F3"
+        android:rotation="0"
+        android:transformPivotX="0dp"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="187dp" />
 
 </RelativeLayout>

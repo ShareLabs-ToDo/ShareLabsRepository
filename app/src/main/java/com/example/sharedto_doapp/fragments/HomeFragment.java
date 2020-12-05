@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -43,6 +44,8 @@ public class HomeFragment extends Fragment {
     private TextView tvYourTasks;
     private TextView tvAllTasks;
     private TextView tvProjectName;
+    private ImageView ivSettingsIcon;
+    private ProgressBar pbProgressBar;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -91,6 +94,7 @@ public class HomeFragment extends Fragment {
         tvProjectName = view.findViewById(R.id.tvProjectName);
         tvYourTasks = view.findViewById(R.id.tvYourTasks);
         tvAllTasks = view.findViewById(R.id.tvAllTasks);
+        ivSettingsIcon = view.findViewById(R.id.ivSettingsIcon);
 
         tvYourTasks.setOnClickListener(new View.OnClickListener() {
 
@@ -113,20 +117,16 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        /*tvAllTasks = view.findViewById(R.id.tvYourTasks);
-        tvAllTasks.setOnClickListener(new View.OnClickListener() {
+        ivSettingsIcon.setOnClickListener(new View.OnClickListener() {
 
 
             @Override
             public void onClick(View v) {
-                Log.i(TAG, ParseUser.getCurrentUser().toString());
-                ParseUser.logOut();
-                ParseUser currentUser = ParseUser.getCurrentUser(); // this will now be null
 
                 Intent startLoginActivityIntent = new Intent(getContext(), LoginActivity.class);
                 startActivity(startLoginActivityIntent);
             }
-        });*/
+        });
 
     }
 }
