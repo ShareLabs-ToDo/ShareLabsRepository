@@ -1,12 +1,16 @@
 package com.example.sharedto_doapp.fragments;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
 
 import com.example.sharedto_doapp.R;
 
@@ -25,6 +29,12 @@ public class HomeFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private Toolbar tbToolbar;
+    private ImageView ivPostImage;
+    private TextView tvYourTasks;
+    private TextView tvAllTasks;
+    private TextView tvProjectName;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -62,5 +72,17 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        tbToolbar = view.findViewById(R.id.tbToolbar);
+        ivPostImage = view.findViewById(R.id.ivPostImage);
+        tvProjectName = view.findViewById(R.id.tvProjectName);
+        tvYourTasks = view.findViewById(R.id.tvYourTasks);
+        tvAllTasks = view.findViewById(R.id.tvAllTasks);
+
     }
 }
