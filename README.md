@@ -28,9 +28,9 @@ Our app allows a group of people to come together and create a project. When you
 - [x] User can create an account with a unique username
 - [x] User can login
 - [ ] User can see overview of project name, progress on project, where to access his or her own individual tasks, where to access all tasks
-- [ ] User can access his or her own individual tasks
+- [x] User can access his or her own individual tasks
 - [ ] User can access all tasks 
-- [ ] User can create tasks 
+- [x] User can create tasks 
 - [ ] User can see his or her own profile
 - [ ] User can see progress on his or her own individual tasks
 - [ ] User can see profiles of other users
