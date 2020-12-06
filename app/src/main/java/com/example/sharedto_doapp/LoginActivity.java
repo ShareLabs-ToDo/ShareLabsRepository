@@ -22,7 +22,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etPassword;
     private Button btnSignUp;
     private Button btnLogin;
-    private Button btnSignUp;
+    //private Button btnSignUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
