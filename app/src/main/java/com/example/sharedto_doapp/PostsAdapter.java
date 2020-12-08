@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -52,6 +53,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         private TextView tvMessage;
         private TextView tvCreatedAt;
         private TextView tvNumLikes;
+        private Button btnLike;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -59,7 +61,9 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             ivImage= itemView.findViewById(R.id.ivImage);
             tvMessage = itemView.findViewById(R.id.tvMessage);
             tvCreatedAt = itemView.findViewById(R.id.tvCreatedAt);
-            tvNumLikes = itemView.findViewById(R.id.tvNumLikes);
+            //tvNumLikes = itemView.findViewById(R.id.tvNumLikes);
+           // btnLike = itemView.findViewById(R.id.btnLike);
+
         }
 
         public void bind(Post post) {
@@ -69,7 +73,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             tvMessage.setText(post.getDescription());
             tvUsername.setText(post.getUser().getUsername());
             tvCreatedAt.setText(post.getCreatedAt().toString());
-            //tvNumLikes.setText(post.getLikesCount());
+            tvNumLikes.setText(post.getLikesCount());
 
             ParseFile image = post.getImage();
             if (image != null) {
