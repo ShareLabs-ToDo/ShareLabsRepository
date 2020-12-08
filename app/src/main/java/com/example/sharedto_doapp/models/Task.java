@@ -7,6 +7,8 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.parceler.Parcel;
 
 import java.text.DateFormat;
@@ -28,6 +30,7 @@ public class Task extends ParseObject {
     public static final String KEY_IS_DONE =  "isDone";
     public static final String KEY_DEADLINE = "deadline";
     public static final String KEY_SUBTASKS = "subtasks";
+    public static final String KEY_CHECKED_SUBTASKS = "subTasks";
 
     public String getTitle() { return getString(KEY_TITLE); }
     public Boolean getIsDone() { return getBoolean(KEY_IS_DONE); }
@@ -40,11 +43,12 @@ public class Task extends ParseObject {
 
         return dateAsString;
     }
-    public String getSubtasks() {
 
-        String subtasks = getString(KEY_SUBTASKS);
+    public List<Subtask> getSubtasks() throws JSONException {
 
-        return subtasks;
+        JSONArray subtasksArray = getJSONArray(KEY_SUBTASKS);
+
+        return Subtask.fromJSONSubtaskArray(subtasksArray);
     }
 
     public void setUser(ParseUser user) { put(KEY_USER, user); }
@@ -53,6 +57,7 @@ public class Task extends ParseObject {
     public void setDeadline(Date deadline) { put(KEY_DEADLINE, deadline); }
 
     public void setSubTasks(String subtasks) { put(KEY_SUBTASKS, subtasks);}
+    public void setCheckedSubTasks(List<Subtask> subtasks) {put(KEY_CHECKED_SUBTASKS, subtasks); }
 
     public void updateIsDone(String objectId, final Boolean newState){
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Task");
@@ -61,6 +66,20 @@ public class Task extends ParseObject {
             public void done(ParseObject entity, ParseException e) {
                 if (e == null) {
                     entity.put(KEY_IS_DONE, newState);
+
+                    entity.saveInBackground();
+                }
+            }
+        });
+    }
+
+    public void updateSubtasks(String objectId, final List<Subtask> subtasks) {
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("Task");
+
+        query.getInBackground(objectId, new GetCallback<ParseObject>() {
+            public void done(ParseObject entity, ParseException e) {
+                if (e == null) {
+                    entity.addAll(KEY_CHECKED_SUBTASKS, subtasks);
 
                     entity.saveInBackground();
                 }

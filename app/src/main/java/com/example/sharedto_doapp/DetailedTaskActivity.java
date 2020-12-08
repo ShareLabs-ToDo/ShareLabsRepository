@@ -13,8 +13,10 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.sharedto_doapp.SubTaskAdapter;
+import com.example.sharedto_doapp.models.Subtask;
 import com.example.sharedto_doapp.models.Task;
 
+import org.json.JSONException;
 import org.parceler.Parcels;
 
 import java.util.Arrays;
@@ -33,7 +35,11 @@ public class DetailedTaskActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detailed_task);
 
         task = Parcels.unwrap(getIntent().getParcelableExtra("task"));
-        populateDetailedTask(task);
+        try {
+            populateDetailedTask(task);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
         backButton = findViewById(R.id.back_button);
 
@@ -46,22 +52,21 @@ public class DetailedTaskActivity extends AppCompatActivity {
 
     }
 
-    private void populateDetailedTask(Task task){
+    private void populateDetailedTask(Task task) throws JSONException {
         TextView taskTitle = findViewById(R.id.task_title);
         subtasksRV = findViewById(R.id.sub_tasks);
         taskTitle.setText(task.getTitle());
 
-        String subtasks = task.getSubtasks();
+        List<Subtask> subtasks = task.getSubtasks();
 
         if(subtasks == null) {
             subtasksRV.setVisibility(View.INVISIBLE);
         } else {
-            List<String> subtaskslist = Arrays.asList(subtasks.split("\\r?\\n"));
-            populateSubtasks(subtaskslist);
+            populateSubtasks(subtasks);
         }
     }
 
-    private void populateSubtasks(List<String> subtasks){
+    private void populateSubtasks(List<Subtask> subtasks){
         Log.i("Whatever", String.valueOf(subtasks));
         subTaskAdapter = new SubTaskAdapter(subtasks, this);
 
