@@ -1,10 +1,14 @@
 package com.example.sharedto_doapp.models;
 
+import com.parse.ParseClassName;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 
 import java.util.ArrayList;
 import java.util.List;
+
+@ParseClassName("Subtask")
 
 public class Subtask {
 
@@ -14,6 +18,14 @@ public class Subtask {
     public Subtask(String title, Boolean isDone) {
         this.title = title;
         this.isDone = isDone;
+    }
+
+    @Override
+    public String toString() {
+        return "Subtask{" +
+                "title='" + title + '\'' +
+                ", isDone=" + isDone +
+                '}';
     }
 
     public String getTitle() {

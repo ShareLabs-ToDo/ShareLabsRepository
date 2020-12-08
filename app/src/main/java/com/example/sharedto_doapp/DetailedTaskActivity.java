@@ -57,16 +57,16 @@ public class DetailedTaskActivity extends AppCompatActivity {
         subtasksRV = findViewById(R.id.sub_tasks);
         taskTitle.setText(task.getTitle());
 
-        List<Subtask> subtasks = task.getSubtasks();
+        List<String> subtasks = task.getSubtasks();
 
-        if(subtasks == null) {
+        if(subtasks.get(0).equals("empty,false")) {
             subtasksRV.setVisibility(View.INVISIBLE);
         } else {
             populateSubtasks(subtasks);
         }
     }
 
-    private void populateSubtasks(List<Subtask> subtasks){
+    private void populateSubtasks(List<String> subtasks){
         Log.i("Whatever", String.valueOf(subtasks));
         subTaskAdapter = new SubTaskAdapter(subtasks, this);
 

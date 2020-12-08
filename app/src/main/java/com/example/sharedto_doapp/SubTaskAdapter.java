@@ -19,10 +19,10 @@ import java.util.List;
 
 public class SubTaskAdapter extends RecyclerView.Adapter<SubTaskAdapter.ViewHolder> {
 
-    List<Subtask> subtasks;
+    List<String> subtasks;
     Context context;
 
-    public SubTaskAdapter(List<Subtask> subtasks, Context context) {
+    public SubTaskAdapter(List<String> subtasks, Context context) {
         this.subtasks = subtasks;
         this.context = context;
     }
@@ -39,7 +39,7 @@ public class SubTaskAdapter extends RecyclerView.Adapter<SubTaskAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull SubTaskAdapter.ViewHolder holder, int position) {
-        Subtask subtask = subtasks.get(position);
+        String subtask = subtasks.get(position);
         holder.bind(subtask);
     }
 
@@ -61,9 +61,10 @@ public class SubTaskAdapter extends RecyclerView.Adapter<SubTaskAdapter.ViewHold
 
         }
 
-        public void bind(Subtask subtask) {
-            subTaskTV.setText(subtask.getTitle());
-            isDone(subtask.getDone());
+        public void bind(String subtask) {
+            String[] subtaskInfo = subtask.split(",");
+            subTaskTV.setText(subtaskInfo[0]);
+            isDone(Boolean.parseBoolean(subtaskInfo[1]));
         }
 
         public void isDone(Boolean isDone) {

@@ -26,6 +26,8 @@ import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
 
+import org.json.JSONException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -101,7 +103,11 @@ public class YourTasksFragment extends Fragment {
                     return;
                 }
                 for (Task task : tasks) {
-                    Log.i(TAG, "Task: " + task.getTitle() + task.getDeadline());
+                    try {
+                        Log.i(TAG, "Task: " + task.getTitle() + task.getDeadline() + task.getSubtasks().toString());
+                    } catch (JSONException ex) {
+                        ex.printStackTrace();
+                    }
                 }
                 userTasks.clear();
                 userTasks.addAll(tasks);
