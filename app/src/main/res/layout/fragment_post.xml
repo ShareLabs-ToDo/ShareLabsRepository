@@ -16,6 +16,7 @@
         android:layout_weight="0.1"
         android:alpha="20"
         android:background="#C8E3E0E0"
+        android:paddingLeft="60dp"
         android:text="@string/type_update_message_here" />
 
     <Button
@@ -39,6 +40,7 @@
         android:layout_height="80dp"
         android:layout_gravity="center"
         android:layout_marginBottom="40dp"
-        android:text="@string/post" />
+        android:text="@string/post"
+        android:textSize="24sp" />
 
 </LinearLayout>
