@@ -22,7 +22,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.sharedto_doapp.Post;
+import com.example.sharedto_doapp.models.Post;
 import com.example.sharedto_doapp.R;
 import com.parse.ParseException;
 import com.parse.ParseFile;

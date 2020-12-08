@@ -13,7 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.sharedto_doapp.Post;
+import com.example.sharedto_doapp.models.Post;
 import com.example.sharedto_doapp.PostsAdapter;
 import com.example.sharedto_doapp.R;
 import com.parse.FindCallback;

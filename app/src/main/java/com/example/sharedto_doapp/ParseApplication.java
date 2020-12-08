@@ -2,6 +2,8 @@ package com.example.sharedto_doapp;
 
 import android.app.Application;
 
+import com.example.sharedto_doapp.models.Post;
+import com.example.sharedto_doapp.models.Task;
 import com.parse.Parse;
 import com.parse.ParseObject;
 
@@ -12,6 +14,8 @@ public class ParseApplication extends Application {
         super.onCreate();
 
         ParseObject.registerSubclass(Post.class);
+        ParseObject.registerSubclass(Task.class);
+
 
         Parse.initialize(new Parse.Configuration.Builder(this)
                 .applicationId("UNyA2Y41Fx933IbCakVeZqlE9ikqR0hUKGCbaOcR")
