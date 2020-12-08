@@ -159,8 +159,8 @@ public class PostFragment extends Fragment {
         post.setDescription(description);
         post.setImage(new ParseFile(photoFile));
         post.setUser(currentUser);
-        post.setLikesCount(0);
-       // post.setCreatedAt(currentTime);
+       // post.setLikesCount(0);
+       //post.setCreatedAt(currentTime);
         post.saveInBackground(new SaveCallback() {
             @Override
             public void done(ParseException e) {
