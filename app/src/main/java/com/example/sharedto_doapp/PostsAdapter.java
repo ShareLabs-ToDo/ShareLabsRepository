@@ -69,7 +69,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             tvMessage.setText(post.getDescription());
             tvUsername.setText(post.getUser().getUsername());
             tvCreatedAt.setText(post.getCreatedAt().toString());
-            tvNumLikes.setText(post.getLikesCount());
+            //tvNumLikes.setText(post.getLikesCount());
 
             ParseFile image = post.getImage();
             if (image != null) {

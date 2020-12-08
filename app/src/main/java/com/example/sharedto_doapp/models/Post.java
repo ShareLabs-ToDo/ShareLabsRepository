@@ -42,19 +42,11 @@ public class Post extends ParseObject {
         put(KEY_USER, user);
     }
 
-    public Date getCreatedAt() {
-        return getDate(KEY_CREATED_KEY);
-    }
+    //public Date getCreatedAt() { return getDate(KEY_CREATED_KEY); }
 
-    public void setCreatedAt(Date createdKey) {
-        put(KEY_CREATED_KEY, createdKey);
-    }
+    //public void setCreatedAt(Date createdKey) { put(KEY_CREATED_KEY, createdKey); }
 
-    public int getLikesCount() {
-        return getInt(KEY_LIKES_COUNT);
-    }
+    //public int getLikesCount() {return getInt(KEY_LIKES_COUNT) }
 
-    public void setLikesCount(int likesCount) {
-        put(KEY_CREATED_KEY, likesCount);
-    }
+    //public void setLikesCount(int likesCount) {put(KEY_CREATED_KEY, likesCount);}
 }
