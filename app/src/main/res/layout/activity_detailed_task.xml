@@ -7,23 +7,31 @@
     tools:context=".DetailedTaskActivity"
     android:background="@color/taskBackgroundBlue">
 
-    <ProgressBar
-        android:id="@+id/progress_bar"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/progress_bar_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:progressTint="#8E92F3"
+        android:progressBackgroundTint="#ffffff"
+        app:layout_constraintStart_toStartOf="@id/progress_bar_guideline"
+        app:layout_constraintEnd_toStartOf="@+id/back_button"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:max="100"
-        android:progress="60"/>
+        android:layout_marginTop="10dp"
+        android:progress="70"/>
 
     <ImageButton
         android:id="@+id/back_button"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_margin="10dp" />
@@ -32,7 +40,7 @@
         android:id="@+id/progress_bar_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="50% Halfway there!"
+        android:text="@string/progress_message"
         app:layout_constraintTop_toBottomOf="@id/progress_bar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +65,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/task_title"
-        app:layout_constraintBottom_toTopOf="@id/task_notes"/>
+        app:layout_constraintBottom_toTopOf="@id/task_notes"
+        app:layout_constraintVertical_bias="0.2"/>
 
     <EditText
         android:id="@+id/task_notes"

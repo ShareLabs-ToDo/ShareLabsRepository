@@ -18,6 +18,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.StringTokenizer;
 
 @ParseClassName("Task")
 @Parcel(analyze = Task.class)
@@ -95,17 +96,64 @@ public class Task extends ParseObject {
         });
     }
 
-//    public void updateSubtasks(String objectId, final List<Subtask> subtasks) {
-//        ParseQuery<ParseObject> query = ParseQuery.getQuery("Task");
-//
-//        query.getInBackground(objectId, new GetCallback<ParseObject>() {
-//            public void done(ParseObject entity, ParseException e) {
-//                if (e == null) {
-//                    entity.addAll(KEY_CHECKED_SUBTASKS, subtasks);
-//
-//                    entity.saveInBackground();
-//                }
-//            }
-//        });
-//    }
+    public int updateSubtasks(String objectId, String subtask, final List<String> subtasks) {
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("Task");
+
+        String[] oldSubtaskInfo = subtask.split(",");
+        String oldTitle = oldSubtaskInfo[0];
+        int itemPosition = subtasks.indexOf(subtask);
+
+        final boolean oldIsDone = Boolean.parseBoolean(oldSubtaskInfo[1]);
+
+        boolean newIsDone = !oldIsDone;
+
+        String newSubtask = oldTitle + "," + newIsDone;
+
+        Log.i(TAG, String.valueOf(itemPosition));
+        Log.i(TAG, String.valueOf(subtasks));
+        subtasks.add(itemPosition, newSubtask);
+        subtasks.remove(itemPosition + 1);
+        Log.i(TAG, String.valueOf(subtasks));
+
+
+        query.getInBackground(objectId, new GetCallback<ParseObject>() {
+            public void done(ParseObject entity, ParseException e) {
+                if (e == null) {
+                    entity.put(KEY_SUBTASKS, subtasks);
+
+                    entity.saveInBackground();
+                }
+            }
+        });
+
+        return itemPosition;
+    }
+
+    public int getProgressNum(List<String> subtasks) {
+        int progress;
+        int allSubtasks = subtasks.size();
+        Double itemsCompleted = 0.0;
+        for (String subtask : subtasks) {
+            String[] subtaskInfo = subtask.split(",");
+            boolean completed = Boolean.parseBoolean(subtaskInfo[1]);
+
+            if (completed) {itemsCompleted ++;}
+        }
+
+        progress = (int) ((itemsCompleted / allSubtasks) * 100);
+        Log.i(TAG, String.valueOf(progress));
+
+        return progress;
+    }
+
+    public String getProgressText(int progress) {
+        if (progress <= 20) {return "Just getting started!";}
+        if (progress < 50) {return "Working up to halfway!";}
+        if (progress == 50) {return "Halfway there!";}
+        if (progress <= 70) {return "Closer to the end now!";}
+        if (progress <= 90) {return "Almost there!";}
+        if (progress < 100) {return " Just a bit more!";}
+        if (progress == 100) {return "Yayyy you're done!!";}
+        return "What?";
+    }
 }

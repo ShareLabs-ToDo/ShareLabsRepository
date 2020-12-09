@@ -14,5 +14,9 @@
     <color name="white">#ffffff</color>
 
     <color name="red">#F44336</color>
+    
+    <color name="checkedTask">#c0c0c0</color>
+    
+    <color name="uncheckedTask">#000000</color>
 
 </resources>

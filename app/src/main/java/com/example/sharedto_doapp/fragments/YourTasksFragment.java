@@ -82,6 +82,7 @@ public class YourTasksFragment extends Fragment {
             public void onRefresh() {
                 Log.i(TAG, "Fetching new data...");
                 queryTasks();
+                swipeRefresh.setRefreshing(false);
             }
         });
 
@@ -92,6 +93,7 @@ public class YourTasksFragment extends Fragment {
     public void queryTasks() {
         ParseQuery<Task> query = ParseQuery.getQuery(Task.class);
         query.include(Task.KEY_USER);
+        query.whereEqualTo(Task.KEY_IS_DONE, false);
         query.setLimit(20);
         query.addDescendingOrder(Task.KEY_DEADLINE);
         query.whereEqualTo(Task.KEY_USER, ParseUser.getCurrentUser());
