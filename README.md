@@ -31,7 +31,7 @@ Our app allows a group of people to come together and create a project. When you
 - [x] User can access his or her own individual tasks
 - [x] User can create tasks 
 - [ ] User can see his or her own profile
-- [ ] User can see progress on his or her own individual tasks
+- [x] User can see progress on his or her own individual tasks
 - [ ] User can see profiles of other users
 - [ ] User can see tasks of other users 
 - [ ] User can see progress on tasks of other users

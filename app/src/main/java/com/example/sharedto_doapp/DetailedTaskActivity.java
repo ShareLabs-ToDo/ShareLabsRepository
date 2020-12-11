@@ -10,12 +10,16 @@ import android.util.Log;
 import android.view.View;
 
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.sharedto_doapp.SubTaskAdapter;
+import com.example.sharedto_doapp.models.Subtask;
 import com.example.sharedto_doapp.models.Task;
 
+import org.json.JSONException;
 import org.parceler.Parcels;
+import org.w3c.dom.Text;
 
 import java.util.Arrays;
 import java.util.List;
@@ -25,7 +29,9 @@ public class DetailedTaskActivity extends AppCompatActivity {
     Task task;
     SubTaskAdapter subTaskAdapter;
     ImageButton backButton;
+    TextView progressBarMessage;
     RecyclerView subtasksRV;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +39,11 @@ public class DetailedTaskActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detailed_task);
 
         task = Parcels.unwrap(getIntent().getParcelableExtra("task"));
-        populateDetailedTask(task);
+        try {
+            populateDetailedTask(task);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
         backButton = findViewById(R.id.back_button);
 
@@ -44,26 +54,39 @@ public class DetailedTaskActivity extends AppCompatActivity {
             }
         });
 
+        progressBarMessage = findViewById(R.id.progress_bar_message);
+        progressBar = findViewById(R.id.progress_bar);
+
+        try {
+            int taskProgress = task.getProgressNum(task.getSubtasks());
+            String progressMessage = task.getProgressText(taskProgress);
+
+            progressBar.setProgress(taskProgress);
+            progressBarMessage.setText(progressMessage);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
     }
 
-    private void populateDetailedTask(Task task){
+    private void populateDetailedTask(Task task) throws JSONException {
         TextView taskTitle = findViewById(R.id.task_title);
         subtasksRV = findViewById(R.id.sub_tasks);
         taskTitle.setText(task.getTitle());
 
-        String subtasks = task.getSubtasks();
+        List<String> subtasks = task.getSubtasks();
 
-        if(subtasks == null) {
+        if(subtasks.get(0).equals("empty,false")) {
             subtasksRV.setVisibility(View.INVISIBLE);
         } else {
-            List<String> subtaskslist = Arrays.asList(subtasks.split("\\r?\\n"));
-            populateSubtasks(subtaskslist);
+            populateSubtasks(task, subtasks);
         }
     }
 
-    private void populateSubtasks(List<String> subtasks){
+    private void populateSubtasks(Task task, List<String> subtasks){
         Log.i("Whatever", String.valueOf(subtasks));
-        subTaskAdapter = new SubTaskAdapter(subtasks, this);
+        subTaskAdapter = new SubTaskAdapter(task, subtasks, this);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         subtasksRV.setLayoutManager(linearLayoutManager);

@@ -26,6 +26,8 @@ import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
 
+import org.json.JSONException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -80,6 +82,7 @@ public class YourTasksFragment extends Fragment {
             public void onRefresh() {
                 Log.i(TAG, "Fetching new data...");
                 queryTasks();
+                swipeRefresh.setRefreshing(false);
             }
         });
 
@@ -90,6 +93,7 @@ public class YourTasksFragment extends Fragment {
     public void queryTasks() {
         ParseQuery<Task> query = ParseQuery.getQuery(Task.class);
         query.include(Task.KEY_USER);
+        query.whereEqualTo(Task.KEY_IS_DONE, false);
         query.setLimit(20);
         query.addDescendingOrder(Task.KEY_DEADLINE);
         query.whereEqualTo(Task.KEY_USER, ParseUser.getCurrentUser());
@@ -101,7 +105,11 @@ public class YourTasksFragment extends Fragment {
                     return;
                 }
                 for (Task task : tasks) {
-                    Log.i(TAG, "Task: " + task.getTitle() + task.getDeadline());
+                    try {
+                        Log.i(TAG, "Task: " + task.getTitle() + task.getDeadline() + task.getSubtasks().toString());
+                    } catch (JSONException ex) {
+                        ex.printStackTrace();
+                    }
                 }
                 userTasks.clear();
                 userTasks.addAll(tasks);

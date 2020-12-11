@@ -73,7 +73,7 @@ public class TaskComposeActivity extends AppCompatActivity {
             @Override
             public void done(ParseException e) {
                 if (e != null) {
-                    Log.e(TAG, "Error attempting to create new task");
+                    Log.e(TAG, "Error attempting to create new task", e);
                     Toast.makeText(getApplicationContext(), "Sorry, problem saving task", Toast.LENGTH_SHORT).show();
                 }
                 Log.i(TAG, "New Task was Created");

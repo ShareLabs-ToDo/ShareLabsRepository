@@ -15,4 +15,8 @@
         <item name="android:textColor">#210070</item>
     </style>
 
+    <style name="progressBarStyle" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="colorPrimary">#F63C74</item>
+    </style>
+
 </resources>
