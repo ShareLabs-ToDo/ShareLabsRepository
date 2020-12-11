@@ -142,7 +142,7 @@
         android:layout_alignParentLeft="true">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvPosts"
+            android:id="@+id/rvPastTasks"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/ivProfileImage"
