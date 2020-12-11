@@ -101,7 +101,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                Intent startDetailedTaskActivityIntent = new Intent(getContext(), /*DetailedTaskActivity*/YourTasksFragment.class);
+                Intent startDetailedTaskActivityIntent = new Intent(getContext(), DetailedTaskActivity.class);
                 startActivity(startDetailedTaskActivityIntent);
             }
         });
