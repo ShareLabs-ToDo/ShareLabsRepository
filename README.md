@@ -207,6 +207,8 @@ Our app allows a group of people to come together and create a project. When you
 
 ## November 27, 2020
 <img src='ShareLabs Progress Gif 1.gif' title='11/27/20' width='' alt='Video Walkthrough' />
+<img src='ShareLabs Progress Gif 12_11_20.gif' title='12/11/20' width='' alt='Video Walkthrough' />
+ 
 
 
 GIFs created with [LiceCap](http://www.cockos.com/licecap/).
