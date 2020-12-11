@@ -8,26 +8,33 @@
     android:background="@drawable/task_item_background"
     android:id="@+id/tasks_container">
 
-    <TextView
-        android:id="@id/task_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textSize="20sp"
-        android:text="Check Up On Discord"
-        android:textStyle="bold"/>
-
     <Button
         android:id="@+id/title_checkbox"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:background="@drawable/ic_outline_check_box_24"
-        app:layout_constraintEnd_toStartOf="@id/task_title"
+        app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="6dp"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2"/>
+
+    <TextView
+        android:id="@id/task_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20sp"
+        android:text="Check Up On Discord"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/task_deadline"
