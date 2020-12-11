@@ -169,6 +169,7 @@ public class PostFragment extends Fragment {
                     Toast.makeText(getContext(), "Error while saving!", Toast.LENGTH_SHORT).show();
                 }
                 Log.i(TAG, "Post save successful!");
+                Toast.makeText(getContext(), "Posted successfully!", Toast.LENGTH_SHORT).show();
                 etMessage.setText("");
                 ivPostImage.setImageResource(0);
             }
