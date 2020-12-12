@@ -21,7 +21,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ShareLabs">
-        <activity android:name=".AllTasksActivity"></activity>
+        <activity android:name=".FriendActivity"></activity>
+        <activity android:name=".AllTasksActivity" />
         <activity android:name=".DetailedTaskActivity" />
         <activity android:name=".TaskComposeActivity" />
 
