@@ -7,9 +7,10 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/myCardView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        app:cardCornerRadius="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardCornerRadius="75dp"
         android:layout_centerHorizontal="true">
 
         <ImageView
@@ -28,7 +29,7 @@
         android:layout_below="@+id/myCardView"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="324dp"
         android:layout_marginRight="324dp"
         android:text="NumFriends"
@@ -46,7 +47,7 @@
         android:layout_alignParentRight="false"
         android:layout_marginStart="-305dp"
         android:layout_marginLeft="-305dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="255dp"
         android:layout_marginRight="255dp"
         android:layout_toEndOf="@+id/tvNumFriends"
@@ -54,7 +55,8 @@
         android:text="Friends"
         android:textAllCaps="false"
         android:textColor="@color/black"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvNumTasksCompleted"
@@ -63,7 +65,7 @@
         android:layout_below="@+id/myCardView"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="124dp"
         android:layout_marginRight="124dp"
         android:text="NumTasksCompleted"
@@ -80,7 +82,7 @@
         android:layout_alignParentRight="false"
         android:layout_marginStart="-120dp"
         android:layout_marginLeft="-120dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="25dp"
         android:layout_marginRight="25dp"
         android:layout_toEndOf="@+id/tvNumTasksCompleted"
@@ -88,7 +90,8 @@
         android:text="tasks completed"
         android:textAllCaps="false"
         android:textColor="@color/black"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        android:textStyle="bold" />
 
 
     <TextView
@@ -97,13 +100,15 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/myCardView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="85dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="324dp"
         android:layout_marginRight="324dp"
         android:text="PAST TASKS"
         android:textAllCaps="true"
         android:textColor="@color/black"
-        android:textSize="12sp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -116,7 +121,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="3dp"
         android:layout_marginLeft="3dp"
-        android:layout_marginTop="208dp"
+        android:layout_marginTop="125dp"
         android:layout_marginBottom="1dp">
 
         <androidx.recyclerview.widget.RecyclerView
