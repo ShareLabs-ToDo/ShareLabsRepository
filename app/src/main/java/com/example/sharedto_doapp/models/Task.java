@@ -27,6 +27,17 @@ public class Task extends ParseObject {
 
     public Task(){}
 
+    String title;
+    List<String> subtasks;
+
+    public Task(String title, List<String> subtasks) {
+        this.title = title;
+        this.subtasks = subtasks;
+    }
+
+    public String getDemoTitle() {return title;}
+    public List<String> getDemoSubtasks() {return subtasks;};
+
     public static final String TAG = "TaskClass";
 
     public static final String KEY_USER = "taskOwner";
