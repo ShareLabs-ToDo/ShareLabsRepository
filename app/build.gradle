@@ -45,4 +45,5 @@ dependencies {
     implementation "androidx.fragment:fragment:$fragment_version"
 
     android.defaultConfig.vectorDrawables.useSupportLibrary = true
+
 }

@@ -40,6 +40,7 @@ public class DetailedTaskActivity extends AppCompatActivity {
 
         task = Parcels.unwrap(getIntent().getParcelableExtra("task"));
         try {
+            assert task != null;
             populateDetailedTask(task);
         } catch (JSONException e) {
             e.printStackTrace();
