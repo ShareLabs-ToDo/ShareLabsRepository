@@ -61,7 +61,7 @@ public class ProfileFragment extends Fragment {
     protected List<Post> allPosts;*/
     private RecyclerView rvPastTasks;
     protected TaskAdapter adapter;
-    protected ArrayList<Task> allTasks;
+    protected List<Task> allTasks;
     public SwipeRefreshLayout swipeContainer;
     private TextView tvNumFriends;
     private TextView tvNumTasksCompleted;
@@ -85,7 +85,7 @@ public class ProfileFragment extends Fragment {
         // Steps to use the recycler view:
         // 1. create the adapter
         allTasks = new ArrayList<>();
-        adapter = new TaskAdapter(allTasks, getContext());
+        adapter = new TaskAdapter((ArrayList<Task>) allTasks, getContext());
 
         // Lookup the swipe container view
         swipeContainer = view.findViewById(R.id.swipeContainer);
@@ -154,13 +154,13 @@ public class ProfileFragment extends Fragment {
     //@Override
     protected void queryTasks() {
         ParseQuery<Task> query = ParseQuery.getQuery(Task.class);
-        query.include(Task.KEY_USER);
+        query.include(Task.KEY_IS_DONE);
         query.whereEqualTo(Task.KEY_IS_DONE, true);
         query.setLimit(20);
         query.addDescendingOrder(Task.KEY_DEADLINE);
         query.findInBackground(new FindCallback<Task>() {
             @Override
-            public void done(ArrayList<Task> tasks, ParseException e) {
+            public void done(List<Task> tasks, ParseException e) {
                 if (e != null) {
                     Log.e(TAG, "issue with getting tasks", e);
                     return;
