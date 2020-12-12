@@ -215,6 +215,9 @@ Our app allows a group of people to come together and create a project. When you
 
 GIFs created with [LiceCap](http://www.cockos.com/licecap/).
 
+### Notes
+- This app was developed while we were all finishing our college semesters and taking finals, which limited how much time we were able to allocate for working on the project.
+
 ## Open-source libraries used
 
 - [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
