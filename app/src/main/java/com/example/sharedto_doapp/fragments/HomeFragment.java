@@ -14,6 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.sharedto_doapp.AllTasksActivity;
 import com.example.sharedto_doapp.DetailedTaskActivity;
@@ -46,6 +48,7 @@ public class HomeFragment extends Fragment {
     private TextView tvProjectName;
     private ImageView ivSettingsIcon;
     private ProgressBar pbProgressBar;
+    private Object HomeFragment;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -96,16 +99,37 @@ public class HomeFragment extends Fragment {
         tvAllTasks = view.findViewById(R.id.tvAllTasks);
         ivSettingsIcon = view.findViewById(R.id.ivSettingsIcon);
 
-        tvYourTasks.setOnClickListener(new View.OnClickListener() {
-
+        /*tvYourTasks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent startDetailedTaskActivityIntent = new Intent(getContext(), DetailedTaskActivity.class);
                 startActivity(startDetailedTaskActivityIntent);
             }
-        });
+        });*/
 
+        /*purple.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new tasks();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.content_frame, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });*/
+
+        tvYourTasks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new YourTasksFragment();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.flContainer, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
 
         tvAllTasks.setOnClickListener(new View.OnClickListener() {
 

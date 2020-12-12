@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
                         fragment = new YourTasksFragment();
                         break;
                     case R.id.action_profile:
+                        fragment = new ProfileFragment();
+                        break;
                     default:
                         fragment = new HomeFragment();
                         break;
