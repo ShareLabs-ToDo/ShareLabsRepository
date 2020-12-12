@@ -11,7 +11,7 @@
         android:id="@+id/task_create_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_create_24"
+        app:srcCompat="@drawable/ic_baseline_create_24"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:padding="10dp"
@@ -28,18 +28,20 @@
         app:layout_constraintEnd_toEndOf="@id/task_create_button"
         app:layout_constraintStart_toEndOf="@+id/profile_image"
         app:layout_constraintTop_toTopOf="parent"
-        android:paddingRight="70dp"/>
+        android:paddingRight="70dp"
+        android:paddingEnd="70dp" />
 
     <ImageView
         android:id="@+id/profile_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/default_image"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:background="@drawable/library"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginHorizontal="20dp"
         app:layout_constraintEnd_toStartOf="@+id/your_tasks_header"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="60dp"/>
+
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipe_refresh"

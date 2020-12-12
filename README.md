@@ -31,10 +31,10 @@ Our app allows a group of people to come together and create a project. When you
 - [x] User can access his or her own individual tasks
 - [x] User can create tasks 
 - [ ] User can see his or her own profile
-- [ ] User can see progress on his or her own individual tasks
+- [x] User can see progress on his or her own individual tasks
 - [ ] User can see profiles of other users
-- [ ] User can see tasks of other users 
-- [ ] User can see progress on tasks of other users
+- [x] User can see tasks of other users 
+- [x] User can see progress on tasks of other users
 - [x] User can post updates and comments about project
 - [x] User can see a timeline of all posts
 - [ ] User can view a description of the app
@@ -208,8 +208,15 @@ Our app allows a group of people to come together and create a project. When you
 ## November 27, 2020
 <img src='ShareLabs Progress Gif 1.gif' title='11/27/20' width='' alt='Video Walkthrough' />
 
+## December 11, 2020
+<img src='ShareLabs Progress Gif 12_11_20.gif' title='12/11/20' width='' alt='Video Walkthrough' />
+ 
+
 
 GIFs created with [LiceCap](http://www.cockos.com/licecap/).
+
+### Notes
+- This app was developed while we were all finishing our college semesters and taking finals, which limited how much time we were able to allocate for working on the project.
 
 ## Open-source libraries used
 

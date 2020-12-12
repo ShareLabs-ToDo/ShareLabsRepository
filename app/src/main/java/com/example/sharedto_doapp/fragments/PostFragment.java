@@ -30,6 +30,8 @@ import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
 import java.io.File;
+import java.util.Calendar;
+import java.util.Date;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -92,7 +94,9 @@ public class PostFragment extends Fragment {
 
 
                 ParseUser currentUser = ParseUser.getCurrentUser();
-                savePost(description, currentUser, photoFile);
+                Date currentTime = Calendar.getInstance().getTime();
+
+                savePost(description, currentUser, photoFile, currentTime);
             }
         });
     }
@@ -150,11 +154,13 @@ public class PostFragment extends Fragment {
         return new File(mediaStorageDir.getPath() + File.separator + fileName);
     }
 
-    private void savePost(String description, ParseUser currentUser, File photoFile) {
+    private void savePost(String description, ParseUser currentUser, File photoFile, Date currentTime) {
         Post post = new Post();
         post.setDescription(description);
         post.setImage(new ParseFile(photoFile));
         post.setUser(currentUser);
+       // post.setLikesCount(0);
+       //post.setCreatedAt(currentTime);
         post.saveInBackground(new SaveCallback() {
             @Override
             public void done(ParseException e) {
@@ -163,6 +169,7 @@ public class PostFragment extends Fragment {
                     Toast.makeText(getContext(), "Error while saving!", Toast.LENGTH_SHORT).show();
                 }
                 Log.i(TAG, "Post save successful!");
+                Toast.makeText(getContext(), "Posted successfully!", Toast.LENGTH_SHORT).show();
                 etMessage.setText("");
                 ivPostImage.setImageResource(0);
             }
