@@ -11,6 +11,8 @@ ShareLabs is an Android application that allows users to easily create and track
 ### Description
 Our app allows a group of people to come together and create a project. When you create a project, you are able to invite others to it and create initial tasks for them, as well as a project deadline. Once the project is initialized, the group members are able to check off what tasks they've finished and post to a shared update feed to inform others of their progress. You can easily see the cumulative progress of your work on the main project screen via a progress bar, as well as see the tasks of other group members.
 
+<img src='ShareLabs Walkthrough.gif' title='12/11/20' width='' alt='Video Walkthrough' />
+
 ### App Evaluation
 - **Category:** Social Networking/ Productivity
 - **Mobile:** This app would mainly be designed with the idea that one would finish tasks throughout the day, using their phone to easily access the app, check off what they have done, or view the progress of others over time.
